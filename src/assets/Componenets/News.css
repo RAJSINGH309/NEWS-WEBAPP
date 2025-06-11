@@ -1,0 +1,193 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Navbar Styles */
+nav {
+  background-color: #f5f5f5;
+}
+
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgb(151, 212, 224);
+  flex-wrap: wrap;
+}
+
+#Name {
+  color: azure;
+  font-weight: 600;
+  font-size: 2rem;
+  flex: 1;
+  text-align: center;
+}
+
+/* Search Bar - Updated */
+.navbar-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 1rem auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.navbar-content input {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  background-color: white;
+}
+
+.navbar-content button {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  background-color: #2596be;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-content button:hover {
+  background-color: #1d7aa3;
+}
+
+/* Subtitle Text */
+nav p {
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+/* Category Buttons */
+.news-category {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 2rem;
+}
+
+.category-btn {
+  height: 2rem;
+  width: 6rem;
+  border-radius: 15px;
+  border: none;
+  background-color: rgb(241, 181, 70);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.category-btn:hover {
+  background-color: rgb(216, 157, 46);
+}
+
+/* Main Content Area */
+.main {
+  padding: 1rem 2rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 946px) {
+  #Name {
+    font-size: 2rem;
+    margin: 10px;
+    width: 60%;
+  }
+
+  .navbar-content {
+    width: 40%;
+  }
+
+  nav p {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+@media screen and (max-width: 800px) {
+  .top-navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  #Name {
+    font-size: 2rem;
+  }
+
+  .navbar-content {
+    width: 80%;
+    flex-direction: row;
+  }
+
+  .navbar-content input,
+  .navbar-content button {
+    font-size: 1.2rem;
+    padding: 0.6rem;
+  }
+
+  .category-btn {
+    width: 7rem;
+    height: 3rem;
+    font-size: 1rem;
+  }
+
+  nav p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .top-navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  #Name {
+    font-size: 1.5rem;
+  }
+
+  .navbar-content {
+    width: 80%;
+    flex-direction: row;
+  }
+
+  .navbar-content input,
+  .navbar-content button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .category-btn {
+    width: 6rem;
+    height: 2rem;
+    font-size: 0.8rem;
+  }
+
+  nav p {
+    font-size: 0.8rem;
+  }
+}

@@ -13,12 +13,11 @@ const News = () => {
   const getData = async () => {
     // getData gives fetch the data from api key and convert into json that is readable //
     const query = inputSearch.trim() === "" ? defaultQuery : inputSearch;
-    const response = await fetch(
-      `https://newsapi.org/v2/everything?q=${query}&apiKey=${API_KEY}`
-    );
-    const jsonData = await response.json();
+   const response = await fetch( `${import.meta.env.VITE_URL}/everything?q=${query}&apiKey=${API_KEY}`);
+const data = await response.json();
+
     // console.log(jsonData.articles);
-    setnewsData(jsonData.articles);
+    setnewsData(data.articles);
   };
 
   const handleInput = (e) => {
